@@ -9,10 +9,7 @@ sudo apt-get -y install ntp
 sudo apt-get -y install git
 
 cd eval /etc/ntp.conf
-git init
-git status
-git add .
-git commit -m "Fixing state"
+git init && git status && git add . && git commit -m "Fixing state"
 # replace the first default server to "ua.pool.ntp.org"
 sudo sed -i "s/0.ubuntu.pool.ntp.org/ua.pool.ntp.org/" /etc/ntp.conf
 
