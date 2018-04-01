@@ -1,4 +1,4 @@
-# /bin/bash
+#!/bin/bash
 
 if [ $(sudo service ntp status | grep Active | cut -d" " -f5) == "inactive" ]; then
 	echo "NOTICE: ntp is not running"
