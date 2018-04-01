@@ -11,7 +11,7 @@ if [ -n "${diff/[ ]*\n/}" ]; then
   echo "NOTICE: /etc/ntp.conf was changed. Calculated diff:"
   pushd /etc
   echo "$(git diff ntp.conf | cut -d$'\n' -f3-)"
-  $(git checkout ^HEAD ntp.conf)
+  $(git checkout ntp.conf)
   sudo service ntp restart
 else
   exit 0
